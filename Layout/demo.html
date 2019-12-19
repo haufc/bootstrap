@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo</title>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            html, body {
+                font-size: 13px;
+            }
+
+            *, body {
+                box-sizing: border-box;
+            }
+
+            label {
+                margin-right: 5px;
+            }
+
+            .demo {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); 
+                gap: 20px;
+                margin: 0 auto;
+                width: 100%;
+                height: 200px;
+                padding: 0 15px;
+                background: #ddd;
+            }
+
+            .demo__item {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                align-items: center;
+            }
+
+            .demo__inputs {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(100px, 2fr));
+                gap: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="demo">
+            <div id="buildingName" class="demo__item">
+            <label for="buildingNameInput">Building Name</label>
+            <input type="text" id="buildingNameInput">
+            </div>
+            
+            <div id="buildingAddress" class="demo__item">
+            <label for="buildingAddressInput">Building Address</label>
+            
+            <div class="demo__inputs">
+                <input type="text" id="buildingAddressInput">
+                <input type="text" id="buildingAddressInput">
+                <input type="text" id="buildingAddressInput">
+            </div>
+            </div>
+            
+            <div id="buildingNote" class="demo__item">
+            <label for="buildingNameInput">Building Note</label>
+            <input type="text" id="buildingNoteInput">
+            </div>
+        </div>
+    </body>
+</html>
